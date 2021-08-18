@@ -1,0 +1,35 @@
+#ui {
+  background-color: #474747;
+  padding: 30px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+.heading{
+
+  font-family: 'Montserrat-bold';
+}
+body {
+  background-image: linear-gradient( #a9d6e5,#61a5c2,#035397);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+label {
+  color: #fff;
+  font-family: 'Montserrat';
+}
+
+button {
+  text-align: center;
+}
+.mapouter {
+  position: relative;
+  text-align: center;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+}

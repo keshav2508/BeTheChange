@@ -1,0 +1,69 @@
+<%- include('head.ejs') %>
+</head>
+<body>
+  <%- include('navigation.ejs') %>
+
+  <main>
+    <% if (volAdded=='true') { %>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>YAY! You've Sucessfully Became a Volunteer</h2>
+        </div>
+        <div class="modal-body">
+          <p>Your Volunteer Code Is:-  <%= vol.vol_id %> </p>
+          <p>Your Password Is:-  <%= vol.vol_pass %> </p>
+        </div>
+        <div class="modal-footer">
+          <h3>Be The Change In Society You Wish To See</h3>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var modal = document.getElementById("myModal");
+      var span = document.getElementsByClassName("close")[0];
+      modal.style.display = "block";
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+    <% } %>
+
+    <% if (volntrs.length > 0) { %>
+    <div class="grid-container2 ">
+      <% for (let volunteer of volntrs) { %>
+      <%  console.log(volunteer);%>
+      <article class="card product-item">
+        <!-- <div class="card__image"> -->
+          <% if (volunteer.vol_imgUrl == null) { %>
+              <img src="images/person.png" alt="<%= volunteer.name %>">
+          <% } else { %>
+              <img src="<%= volunteer.vol_imgUrl %>" alt="<%= volunteer.name %>">
+          <% } %>
+
+        <!-- </div> -->
+        <div class="row">
+          <div class="col">
+            <h1 style=" text-align:right; font-family: 'Montserrat'; "><%= volunteer.vol_name %></h1>
+          </div>
+          <div class="col">
+            <h2  style=" text-align:right; "><%= volunteer.vol_age %></h2>
+          </div>
+        </div>
+        <div class="card__actions">
+          <a href="/products/<%= volunteer.vol_id %>" class="btn btn-outline-primary">Details</a>
+        </div>
+      </article>
+      <% } %>
+    </div>
+    <% } else { %>
+    <h1>No Volunteers Found!</h1>
+    <% } %>
+  </main>
+  <%- include('end.ejs') %>

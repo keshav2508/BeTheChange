@@ -1,0 +1,43 @@
+<%- include('head.ejs') %>
+  <!-- <link rel="stylesheet" href="css/formStyles.css"> -->
+  <style >
+    .button{
+      background-color: #04AA6D;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <%- include('navigation.ejs') %>
+  <!-- <div class="container"> -->
+    <div class="row">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-4">
+        <!-- <div id="ui"> -->
+          <h1 class="text-center heading" style="color: #000; margin-bottom: 30px; font-family: 'Montserrat';">Log In</h1>
+          <form class="form-group" action="/buddies" method="POST">
+            <label for="">Vol Id</label>
+            <input type="INTEGER" name="vol_id" class="form-control" placeholder="Enter your Vol Id">
+            <br>
+            <label for="">Password</label>
+            <input type="text" name="vol_password" class="form-control" id="" placeholder="Enter your Password">
+            <br>
+            <br>
+            <button class="btn button btn-lg" type="submit">Start Helping</button>
+            <br>
+            <a class="btn button btn-lg" href="/vol-form">Become a Volunteer</a>
+          </form>
+        <!-- </div> -->
+      </div>
+      <div class="col-lg-4"></div>
+    </div>
+  <!-- </div> -->
+
+
+  <%- include('end.ejs') %>

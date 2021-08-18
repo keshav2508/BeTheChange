@@ -1,0 +1,17 @@
+<%- include('head.ejs') %>
+</head>
+<body>
+  <%- include('navigation.ejs') %>
+
+        <main class="centered">
+            <h1><%= req.ask_name %></h1>
+            <hr>
+            <h2><%= req.ask_state %></h2>
+            <p><%= req.ask_email %></p>
+            <p><%= req.ask_age %></p>
+            <p><%= req.ask_address %></p>
+            <p><%= req.ask_gender %></p>
+            <p><%= req.ask_mobile %></p>
+            <p><%= req.ask_status %></p>
+        </main>
+<%- include('end.ejs') %>

@@ -1,0 +1,35 @@
+<%- include('head.ejs') %>
+</head>
+<body>
+  <%- include('navigation.ejs') %>
+  <div class="container">
+    <img src="images/doctor.png" width="200" height="200">
+    <div class="center">
+      <h1 class="display-1 title">Helping Someone Gives A Great Satisfaction</h1>
+    </div>
+  </div>
+  <div class="row center-page">
+    <div class="col container_ask">
+      <img class="image_home"  src="images/helpseeking.png" alt="Ask Help">
+      <a href="/ask-form" type="button" class="butns btn btn-lg btn-outline-primary  image_home">Ask Help</a>
+    </div>
+    <div class="col" style="padding:50px">
+      <h1 class="quote">Ask for Help, Not because you are weak </h1>
+      <h1 class="quote">But because you want to remain strong</h1>
+    </div>
+  </div>
+  <br>
+  <div class="row center-page">
+  <div class="col" style="padding:50px">
+    <h1 class="quote">A kind Gesture can reach a wound  </h1>
+    <h1 class="quote">that only compassion can heal</h1>
+  </div>
+    <div class="col container_ask">
+      <img class="image_home" src="images/helpgiving.jpg" alt="Volunteer">
+      <div class="clickTo">
+        <p>Click to</p>
+      </div>
+      <a href="/vol-form" type="button" class="butns btn btn-lg btn-outline-primary image_home" style="top:50%; left:50%; color: #fff; border-color: #fff;">Volunteer</a>
+    </div>
+  </div>
+  <%- include('end.ejs') %>

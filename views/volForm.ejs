@@ -1,0 +1,75 @@
+<%- include('head.ejs') %>
+  <link rel="stylesheet" href="css/formStyles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8">
+        <div id="ui">
+          <h1 class="text-center heading" style="color: #fff; margin-bottom: 30px;">REGISTRATION FORM</h1>
+          <form class="form-group" action="/vol-form" method="POST">
+            <div class="row ">
+              <div class="col-lg-6">
+                <label for="">First Name</label>
+                <input type="text" name="vol_name_fr" class="form-control" placeholder="Enter your first name">
+              </div>
+              <div class="col-lg-6">
+                <label for="">Last Name</label>
+                <input type="text" name="vol_name_la" class="form-control " placeholder="Enter your last name">
+              </div>
+            </div><br>
+
+            <div class="row">
+              <div class="col-lg-6">
+                <label for="">Age</label>
+                <input type="number" name="vol_age" class="form-control" placeholder="Enter age">
+              </div>
+              <div class="col-lg-6">
+                <label for="">Gender</label>
+                <select name="vol_gender" id="" class="form-control">
+                  <option value="">Select Gender</option>
+                  <option value="">Male</option>
+                  <option value="">Female</option>
+                  <option value="">Others</option>
+                </select>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-lg-6">
+                <label for="">Phone Number</label>
+                <input type="number" name="vol_mobile" id="" class="form-control" placeholder="Enter your phone number">
+              </div>
+              <div class="col-lg-6">
+                <label for="">E-mail</label>
+                <input type="email" name="vol_email" class="form-control" id="" placeholder="Enter your E-mail">
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-lg-6">
+                <label for="">Password</label>
+                <input type="text" name="vol_pass" id="" class="form-control" placeholder="Enter Password">
+              </div>
+              <div class="col-lg-6">
+                <label for="">Image Url</label>
+                <input type="imageUrl" name="vol_imageUrl" class="form-control" id="" placeholder="Enter your ImageUrl">
+              </div>
+            </div>
+            <br>
+            <label for="">Address</label>
+            <input type="address" name="vol_address" class="form-control" id="" placeholder="Enter your Address">
+            <br>
+            <br>
+            <button id="addVol" class="btn centerBtn btn-primary btn-lg" type="submit">Add Volunteer</button>
+            <br>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+  </div>
+
+
+  <%- include('end.ejs') %>

@@ -1,0 +1,54 @@
+
+<%- include('head.ejs') %>
+</head>
+<body>
+  <%- include('navigation.ejs') %>
+  <main>
+    <% if (requests.length > 0) { %>
+    <div class="grid-container ">
+      <% for (let req of requests) { %>
+      <%  console.log(req);%>
+      <article class="card product-item">
+        <div class="row">
+          <div class="col">
+            <h1 style=" text-align:left; font-family: 'Montserrat'; "><%= req.ask_name %></h1>
+          </div>
+          <div class="col">
+            <h2  style=" font-family: 'Montserrat'; "><%= req.ask_age %></h2>
+          </div>
+          <div class="col">
+            <h2  style=" font-family: 'Montserrat'; "><%= req.ask_state %></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div style="text-align:Left;" class="card__actions col">
+            
+            <a href="/ask-List/<%= req.ask_id %>" class="btn btn-outline-primary">Details</a>
+          </div>
+          <p style="text-align:right; font-size:30px;" class="col">Status :</p>
+          <div style="text-align:right;" class="col">
+            <% if (req.ask_status == "open") { %>
+              <h2  style="font-family: 'Montserrat';  color: Lime; "><%= req.ask_status %></h2>
+              <div class="card__actions">
+                <a href="/ask-List/<%= req.ask_id %>" class="btn btn-outline-primary">Make Buddy</a>
+              </div>
+            <% } %>
+            <% if (req.ask_status == "assinged") { %>
+              <h2  style=" font-family: 'Montserrat'; color:Bright Gold; "><%= req.ask_status %></h2>
+            <% } %>
+            <% if (req.ask_status == "closed") { %>
+              <h2  style=" font-family: 'Montserrat'; color:Tomato; "><%= req.ask_status %></h2>
+            <% } %>
+          </div>
+        </div>
+
+        <br>
+
+      </article>
+      <% } %>
+    </div>
+    <% } else { %>
+    <h1>No Request Found!</h1>
+    <% } %>
+  </main>
+  <%- include('end.ejs') %>
